@@ -1,7 +1,4 @@
-
-
-pub struct User
-{
+pub struct User {
     pub full_name: String,
     pub username: String,
     pub sudoer: bool,
@@ -9,21 +6,21 @@ pub struct User
     pub autologin: bool,
 }
 
+pub struct Configuration {
+    /// Disk which is the installation target, e.g. "/dev/nvme0n1"
+    pub target_disk: String,
 
-pub struct Configuration
-{
     /// Soft recommendation for boot partition size. Defaulted to a reasonable value.
     /// Actual partition size may vary for alignment reasons.
     pub boot_partition_bytes: u64,
 
     /// Root password
-    /// 
+    ///
     /// Also the FDE password
-    pub root_password: String, 
+    pub root_password: String,
     pub users: Vec<User>,
 }
 
-pub fn install(config: &Configuration)
-{
+pub fn install(config: &Configuration) {
     todo!()
 }
